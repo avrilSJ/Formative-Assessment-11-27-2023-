@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int N;
+	int x;
+	int i;
+	int sum = 0;
+	int evenCounter = 0;
+	
+	cout << "Enter integer N: "; cin >> N;
+
+	for (i=0;i<N;i++)
+	{
+		cout <<"Enter value #" << i+1 <<": " ; 
+		cin >> x;
+		
+	if (x % 2 == 0)
+		{
+		sum = sum + x;
+		evenCounter++;
+		}
+	}
+	cout << "\nThere are " << evenCounter << " even numbers." << endl;
+	cout << "The sum of all even numbers is: " << sum << endl;
+}

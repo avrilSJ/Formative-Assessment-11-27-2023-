@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+	double V;
+	int x, y;
+	const double Z = 2.5;
+	
+	cout << "Enter integer x value: ";  cin >> x;
+	cout << "Enter integer y value: "; cin >> y;
+	switch (x)
+	{
+	
+	// x = 1
+	
+	case 1:
+	if (y > 1 && y < 5 )
+	V = x * y * Z;
+	
+	else if (y >= 5)
+	V = x+y/Z;break;
+	
+	// x = 2
+	
+	case 2:
+	if (y <= 5)
+	V = abs(x*y/Z);
+		
+	else if(y > 5)
+	V = x + sqrt(y + Z);break;
+	
+	default: V = x + y + Z;
+		
+	}
+	
+	cout << setw(10) << fixed << setprecision(2) << V;
+}
